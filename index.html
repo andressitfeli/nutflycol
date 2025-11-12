@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Nutflycol — Reserva tus vuelos al mejor precio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 13l20-9-7 9 7 9-20-9z" fill="currentColor"/>
+        </svg>
+        <span class="brand">Nutflycol</span>
+      </div>
+      <nav class="nav">
+        <a href="#destinos" class="nav-link">Destinos</a>
+        <a href="#reviews" class="nav-link">Reseñas</a>
+        <a href="#cotizar" class="btn neon" id="openCotizar">Cotizar Promos 💸</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+      <div class="neon-bg"></div>
+      <div class="overlay"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title">Reserva tus vuelos al mejor precio <span class="spark">🚀</span></h1>
+        <p class="subtitle">Viaja con estilo, tecnología y buen precio. ¡Tu próxima aventura empieza aquí! ✈️</p>
+        <div class="cta">
+          <a href="#destinos" class="btn primary">Ver resultados</a>
+          <a href="#cotizar" class="btn outline" id="openCotizar2">Cotizar vuelo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits container">
+      <div class="benefit">✈️ <strong>Reservas exprés</strong><br><span>Encuentra y reserva en minutos.</span></div>
+      <div class="benefit">💸 <strong>Ofertas neon</strong><br><span>Promos con precios que brillan.</span></div>
+      <div class="benefit">🔒 <strong>Pago seguro</strong><br><span>Tus datos protegidos siempre.</span></div>
+    </section>
+
+    <section id="reviews" class="reviews container">
+      <h2>Lo que dicen nuestros viajeros</h2>
+      <div class="review-list">
+        <div class="review">⭐️⭐️⭐️⭐️⭐️ <strong>Ana</strong> — "Buen precio y servicio rápido. ✈️😄"</div>
+        <div class="review">⭐️⭐️⭐️⭐️ <strong>Carlos</strong> — "Me encantó la opción de comparar tarifas. 👍"</div>
+        <div class="review">⭐️⭐️⭐️⭐️⭐️ <strong>María</strong> — "Reservé en 2 minutos, ¡increíble! 😍"</div>
+      </div>
+    </section>
+
+    <section id="destinos" class="destinos container">
+      <h2>Destinos populares en Colombia 🇨🇴</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60');"></div>
+          <div class="card-body"><h4>Bogotá</h4><p>La capital que nunca duerme 🇨🇴</p><a href="#cotizar" class="btn primary small">Reservar ahora ✈️</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60');"></div>
+          <div class="card-body"><h4>Medellín</h4><p>Montañas, flores y cultura 🌸</p><a href="#cotizar" class="btn primary small">Reservar ahora ✈️</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60');"></div>
+          <div class="card-body"><h4>Cartagena</h4><p>Sol, mar y arena dorada ☀️</p><a href="#cotizar" class="btn primary small">Reservar ahora ✈️</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-small container" id="cotizar-section">
+      <div class="cotizar-card">
+        <h3>¿Listo para tu próxima aventura? 🌍</h3>
+        <p>Cotiza tus promos y recibe descuentos exclusivos 💸✈️</p>
+        <a href="#cotizar" class="btn neon" id="openCotizar3">Empezar ahora 🚀</a>
+      </div>
+    </section>
+
+    <!-- Modal Cotizar -->
+    <div class="modal" id="modalCotizar" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-card">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h3>Cotizar Promos 💸</h3>
+        <form id="cotizarForm">
+          <label>Nombre <input type="text" name="nombre" required></label>
+          <label>Correo <input type="email" name="email" required></label>
+          <label>Destino <select name="destino"><option>Bogotá</option><option>Medellín</option><option>Cartagena</option><option>San Andrés</option><option>Santa Marta</option></select></label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Enviar cotización ✅</button>
+          </div>
+        </form>
+        <div class="sent-success" id="sentSuccess" aria-hidden="true">✅ ¡Cotización enviada! Te contactamos pronto.</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Nutflycol. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+<script>
+// WebAudio click sound for all buttons (light whoosh/pop)
+function playClick() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = 'sine';
+    o.frequency.setValueAtTime(900, ctx.currentTime);
+    g.gain.setValueAtTime(0, ctx.currentTime);
+    o.connect(g);
+    g.connect(ctx.destination);
+    g.gain.linearRampToValueAtTime(0.02, ctx.currentTime + 0.001);
+    o.start();
+    g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.18);
+    o.stop(ctx.currentTime + 0.2);
+  } catch (e) {
+    // ignore
+  }
+}
+
+document.querySelectorAll('.btn, .nav-link, .logo').forEach(el=>{
+  el.addEventListener('click', ()=> playClick());
+});
+
+// Modal handling
+const modal = document.getElementById('modalCotizar');
+const openButtons = [document.getElementById('openCotizar'), document.getElementById('openCotizar2'), document.getElementById('openCotizar3')];
+const closeBtn = document.getElementById('closeModal');
+openButtons.forEach(b => { if(b) b.addEventListener('click', (e)=>{ e.preventDefault(); modal.setAttribute('aria-hidden','false'); modal.classList.add('open'); document.body.style.overflow='hidden'; })});
+if(closeBtn) closeBtn.addEventListener('click', ()=>{ modal.setAttribute('aria-hidden','true'); modal.classList.remove('open'); document.body.style.overflow=''; });
+document.getElementById('cotizarForm').addEventListener('submit', function(e){ e.preventDefault(); document.getElementById('cotizarForm').style.display='none'; document.getElementById('sentSuccess').setAttribute('aria-hidden','false'); document.getElementById('sentSuccess').style.display='block'; playClick(); });
+
+</script>
+</body>
+</html>
